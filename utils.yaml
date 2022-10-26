@@ -1,0 +1,5 @@
+---
+API_URL: "https://shopee.vn/api/v2/item/get_ratings?filter=0&flag=1&itemid={item_id}&limit=20&offset={offset}&shopid={shop_id}&type=0"
+HEADER:
+  - color: "màu sắc"
+  - material: "vật liệu"
