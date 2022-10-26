@@ -162,162 +162,164 @@
             </div>
           </div>
         </div>
-        <div class="row p-0 m-0 mt-5">
-          <div class="col-12 col-sm-12 col-md-4 col-lg-4" style="padding-bottom: 20px; text-align: justify;">
-            <h4 class="product-name text-capitalize" style="padding-left: 10px">{{name}}</h4>
+        {% if name %}
+          <div class="row p-0 m-0 mt-5">
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4" style="padding-bottom: 20px; text-align: justify;">
+              <h4 class="product-name text-capitalize" style="padding-left: 10px">{{name}}</h4>
+            </div>
           </div>
-        </div>
-        <div class="row text-center p-0 m-0">
-          <!-- Show data -->
-          <div class="product-img col-12 col-sm-12 col-md-4 col-lg-4">
-            <img
-              class="img-thumbnail img-fluid"
-              src={{image}}
-              alt="spx_vn_home_detail_summary_5"
-            />
-          </div>
-          <div class="col-12 col-sm-12 col-md-8 col-lg-8">
-            <div class="accordion" id="accordionFlushExample">
-              <div class="accordion-item" style="..">
-                <h2 class="accordion-header d-flex" id="flush-headingOne">
-                  <button
-                    class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapseOne"
-                    aria-expanded="false"
-                    aria-controls="flush-collapseOne"
-                    style="border-bottom: 2px solid green;"
+          <div class="row text-center p-0 m-0">
+            <!-- Show data -->
+            <div class="product-img col-12 col-sm-12 col-md-4 col-lg-4">
+              <img
+                class="img-thumbnail img-fluid"
+                src={{image}}
+                alt="spx_vn_home_detail_summary_5"
+              />
+            </div>
+            <div class="col-12 col-sm-12 col-md-8 col-lg-8">
+              <div class="accordion" id="accordionFlushExample">
+                <div class="accordion-item" style="..">
+                  <h2 class="accordion-header d-flex" id="flush-headingOne">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseOne"
+                      aria-expanded="false"
+                      aria-controls="flush-collapseOne"
+                      style="border-bottom: 2px solid green;"
+                    >
+                      <div>
+                        <i class="far fa-hand-point-up me-2" style="color: green;"></i>
+                      </div>
+                      <div style="display: flex;">
+                       Đánh giá tốt {{good|length}}/{{total}}
+                      </div>
+                    </button>
+                  </h2>
+                  <div
+                    id="flush-collapseOne"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="flush-headingOne"
+                    data-bs-parent="#accordionFlushExample"
                   >
-                    <div>
-                      <i class="far fa-hand-point-up me-2" style="color: green;"></i>
+                    <div class="accordion-body data-ratings-body text-start">
+                      <ol>
+                        {% for d in good %}
+                          <li class="mb-3"><pre>{{d}}</pre></li>
+                        {% endfor %}
+                      </ol>
                     </div>
-                    <div style="display: flex;">
-                     Đánh giá tốt {{good|length}}/{{total}}
-                    </div>
-                  </button>
-                </h2>
-                <div
-                  id="flush-collapseOne"
-                  class="accordion-collapse collapse"
-                  aria-labelledby="flush-headingOne"
-                  data-bs-parent="#accordionFlushExample"
-                >
-                  <div class="accordion-body data-ratings-body text-start">
-                    <ol>
-                      {% for d in good %}
-                        <li class="mb-3"><pre>{{d}}</pre></li>
-                      {% endfor %}
-                    </ol>
                   </div>
                 </div>
-              </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="flush-headingTwo">
-                  <button
-                    class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapseTwo"
-                    aria-expanded="false"
-                    aria-controls="flush-collapseTwo"
-                    style="border-bottom: 2px solid orange;"
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingTwo">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseTwo"
+                      aria-expanded="false"
+                      aria-controls="flush-collapseTwo"
+                      style="border-bottom: 2px solid orange;"
+                    >
+                      <div>
+                        <i class="far fa-hand-point-right me-2" style="color: orange;"></i>
+                      </div>
+                      <div>
+                        Đánh giá trung bình {{medium|length}}/{{total}}
+                      </div>
+                    </button>
+                  </h2>
+                  <div
+                    id="flush-collapseTwo"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="flush-headingTwo"
+                    data-bs-parent="#accordionFlushExample"
                   >
-                    <div>
-                      <i class="far fa-hand-point-right me-2" style="color: orange;"></i>
+                    <div class="accordion-body text-start data-ratings-body">
+                      <ol>
+                        {% for d in medium %}
+                          <li class="mb-3"><pre>{{d}}</pre></li>
+                        {% endfor %}
+                      </ol>
                     </div>
-                    <div>
-                      Đánh giá trung bình {{medium|length}}/{{total}}
-                    </div>
-                  </button>
-                </h2>
-                <div
-                  id="flush-collapseTwo"
-                  class="accordion-collapse collapse"
-                  aria-labelledby="flush-headingTwo"
-                  data-bs-parent="#accordionFlushExample"
-                >
-                  <div class="accordion-body text-start data-ratings-body">
-                    <ol>
-                      {% for d in medium %}
-                        <li class="mb-3"><pre>{{d}}</pre></li>
-                      {% endfor %}
-                    </ol>
                   </div>
                 </div>
-              </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="flush-headingThree">
-                  <button
-                    class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapseThree"
-                    aria-expanded="false"
-                    aria-controls="flush-collapseThree"
-                    style="border-bottom: 2px solid red;"
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingThree">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseThree"
+                      aria-expanded="false"
+                      aria-controls="flush-collapseThree"
+                      style="border-bottom: 2px solid red;"
+                    >
+                      <div>
+                        <i class="far fa-hand-point-down me-2" style="color: red;"></i>
+                      </div>
+                      <div>
+                        Đánh giá tệ {{bad|length}}/{{total}}
+                      </div>
+                    </button>
+                  </h2>
+                  <div
+                    id="flush-collapseThree"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="flush-headingThree"
+                    data-bs-parent="#accordionFlushExample"
                   >
-                    <div>
-                      <i class="far fa-hand-point-down me-2" style="color: red;"></i>
+                    <div class="accordion-body text-start data-ratings-body">
+                      <ol>
+                        {% for d in bad %}
+                          <li class="mb-3"><pre>{{d}}</pre></li>
+                        {% endfor %}
+                      </ol>
                     </div>
-                    <div>
-                      Đánh giá tệ {{bad|length}}/{{total}}
-                    </div>
-                  </button>
-                </h2>
-                <div
-                  id="flush-collapseThree"
-                  class="accordion-collapse collapse"
-                  aria-labelledby="flush-headingThree"
-                  data-bs-parent="#accordionFlushExample"
-                >
-                  <div class="accordion-body text-start data-ratings-body">
-                    <ol>
-                      {% for d in bad %}
-                        <li class="mb-3"><pre>{{d}}</pre></li>
-                      {% endfor %}
-                    </ol>
                   </div>
                 </div>
-              </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="flush-headingFour">
-                  <button
-                    class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapseFour"
-                    aria-expanded="false"
-                    aria-controls="flush-collapseFour"
-                    style="border-bottom: 2px solid black;"
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingFour">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseFour"
+                      aria-expanded="false"
+                      aria-controls="flush-collapseFour"
+                      style="border-bottom: 2px solid black;"
+                    >
+                      <div>
+                        <i class="fa-regular fa-circle-xmark me-2" style="color: black;"></i>
+                      </div>
+                      <div>
+                        Spam {{spam|length}}/{{total}}
+                      </div>
+                    </button>
+                  </h2>
+                  <div
+                    id="flush-collapseFour"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="flush-headingFour"
+                    data-bs-parent="#accordionFlushExample"
                   >
-                    <div>
-                      <i class="fa-regular fa-circle-xmark me-2" style="color: black;"></i>
+                    <div class="accordion-body text-start data-ratings-body">
+                      <ol>
+                        {% for d in spam %}
+                          <li class="mb-3"><pre style="font-family: ">{{d}}</pre></li>
+                        {% endfor %}
+                      </ol>
                     </div>
-                    <div>
-                      Spam {{spam|length}}/{{total}}
-                    </div>
-                  </button>
-                </h2>
-                <div
-                  id="flush-collapseFour"
-                  class="accordion-collapse collapse"
-                  aria-labelledby="flush-headingFour"
-                  data-bs-parent="#accordionFlushExample"
-                >
-                  <div class="accordion-body text-start data-ratings-body">
-                    <ol>
-                      {% for d in spam %}
-                        <li class="mb-3"><pre style="font-family: ">{{d}}</pre></li>
-                      {% endfor %}
-                    </ol>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+        {% endif %}
     </section>
 
     <footer class="text-center text-white" style="background-color: #f1f1f1;">
@@ -346,7 +348,7 @@
           <!-- Github -->
           <a
             class="btn btn-link btn-floating btn-lg text-dark m-1"
-            href="#!"
+            href="https://github.com/Nduy2k"
             role="button"
             data-mdb-ripple-color="dark"
             ><i class="fab fa-github"></i
