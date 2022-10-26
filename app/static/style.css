@@ -1,0 +1,193 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+
+  font-family: 'Roboto Mono', monospace;
+
+  /* font-family: 'Pacifico', cursive; */
+  /* height: 1500px; */
+}
+
+pre {
+    font-family: 'Roboto Mono', monospace;
+    white-space: pre-wrap;
+    width: 100%;
+}
+
+li {
+  display: list-item;
+  list-style-position: inside;
+}
+
+.header {
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+}
+
+.header__navbar__container {
+  width: 100%;
+}
+
+.section {}
+
+.background {
+  position: relative;
+  padding-top: 50px;
+}
+
+.background .text {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  color: white;
+  font-size: 75px;
+  font-weight: 700;
+}
+
+.background .text span {
+  display: block;
+}
+
+.background .image img {}
+
+.background .form-analyst {
+  position: absolute;
+  top: 70%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.form-analyst .form-input {
+  width: 807px;
+  height: 80px;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  background: rgb(255, 255, 255);
+  border-radius: 4px;
+  -webkit-box-pack: center;
+  justify-content: center;
+
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+}
+
+.form-input .input-url {
+  border: 0;
+  outline: none;
+  width: 75%;
+  height: 45px;
+  font-style: italic;
+}
+
+.form-input .btn-submit {
+  border: 0;
+  outline: none;
+  height: 45px;
+  width: 15%;
+  color: white;
+  background: rgb(238, 77, 45);
+  border-radius: 4px;
+}
+
+
+section {
+  margin-bottom: 100px;
+}
+
+.data {
+    padding-inline: 25px;
+}
+
+.data .product-name {
+    color: black;
+    font-weight: bold;
+}
+
+
+.data-ratings-body {
+  max-height: 400px;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+
+
+/* Extra Small Devices, Phones */
+/* Mobile */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  .form-analyst .form-input {
+    top: 1000px;
+    width: 80%;
+    height: 50px;
+  }
+
+  .background .form-analyst {
+    top: 75%;
+  }
+
+  .form-input .input-url {
+    height: 30px;
+    width: 65%;
+    font-size: 13px;
+    font-style: italic;
+  }
+
+  .form-input .btn-submit {
+    height: 30px;
+    width: 15%;
+  }
+
+  .background .text {
+    top: 80px;
+    font-size: 20px;
+  }
+
+  .product-img {
+    padding-bottom: 10px;
+    }
+}
+/* Small Devices, Tablets */
+/* Tablet */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+  .form-analyst .form-input {
+    width: 70%;
+  }
+  .background .form-analyst {
+    top: 80%;
+
+  .background .text{
+    font-size: 40px;
+  }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {}
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: gray;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000;
+}
