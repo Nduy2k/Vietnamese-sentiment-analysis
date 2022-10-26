@@ -118,6 +118,9 @@ section {
 /* Extra Small Devices, Phones */
 /* Mobile */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  .container .logo{
+    max-height: 40px;
+  }
   .form-analyst .form-input {
     top: 1000px;
     width: 80%;
