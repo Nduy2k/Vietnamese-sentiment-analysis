@@ -1,4 +1,5 @@
 import re
+from unshortenit import UnshortenIt
 import requests
 import pandas as pd
 import pickle
@@ -19,19 +20,21 @@ f.close()
 API_URL = "https://shopee.vn/api/v2/item/get_ratings?filter=0&flag=1&itemid={item_id}&limit=20&offset={offset}&shopid={shop_id}&type=0"
 
 
-def check_shopee_id(url):
-    product_id = re.search(r"i\.(\d+)\.(\d+)", url)
+def check_shopee_id(link):
+    unshortener = UnshortenIt()
+    link = unshortener.unshorten(link)
+
+    product_id = re.search(r"i\.(\d+)\.(\d+)", link)
     if product_id:
         return product_id
     else:
-        return re.search(r"product/(\d+)/(\d+)", url)
+        return re.search(r"product/(\d+)/(\d+)", link)
 
 
-def get_ratings(product_url, dictionary=None, header=None, max_cmt=200):
+def get_ratings(product_url, dictionary=None, header=None):
     """
     :param product_url: link of shopee product
     :param header: header will be removed
-    :param max_cmt: number of max comments
     :param dictionary: dictionary
     :return: data frame comments
     """
@@ -47,6 +50,7 @@ def get_ratings(product_url, dictionary=None, header=None, max_cmt=200):
     shop_id, item_id = product_id[1], product_id[2]
 
     offset = 0
+    count = 0
     raw_ratings = []
     filtered_ratings = []
     product_items = {}
@@ -58,24 +62,37 @@ def get_ratings(product_url, dictionary=None, header=None, max_cmt=200):
             API_URL.format(shop_id=shop_id, item_id=item_id, offset=offset)
         ).json()
 
-        ratings_data = response["data"]["ratings"]
+        print(response, end="\n")
 
-        for i, rating in enumerate(ratings_data, 1):
+        if response["data"]["ratings"] is None:
+            break
+
+        rcount_with_context = response["data"]["item_rating_summary"]["rcount_with_context"]
+
+        for i, rating in enumerate(response["data"]["ratings"], 1):
+            if rating["comment"]:
+                count += 1
+
+            # print(count)
+            # print(rating["comment"])
+
             comments = standardize_data(rating['comment'])
             if comments:
                 comments = rm_header(str(comments), header, dictionary)
                 if comments:
                     filtered_ratings.append(comments)
                     raw_ratings.append(rating['comment'])
+
+            if count >= rcount_with_context:
+                break
+
         if i % 20:
             break
         offset += 20
 
+        ratings_data = response["data"]["ratings"]
         product_data = ratings_data[0]
         product_items = product_data["product_items"]
-
-        # if len(processed_data) > max_cmt:
-        #     break
 
     filtered_ratings = pd.DataFrame(filtered_ratings, columns=['comments'])
     raw_ratings = pd.DataFrame(raw_ratings, columns=['comments'])
@@ -84,8 +101,4 @@ def get_ratings(product_url, dictionary=None, header=None, max_cmt=200):
 
 
 if __name__ == "__main__":
-    with open('model/tokenizer.pkl', 'rb') as f:
-        DICTIONARY = pickle.load(f)
-    f.close()
-    url = "https://shopee.vn/D%C3%A2y-%C4%90eo-C%E1%BB%95-G%E1%BA%AFn-%C4%90i%E1%BB%87n-Tho%E1%BA%A1i-In-H%C3%ACnh-Ng%C3%B4i-Sao-B%C3%B3ng-%C4%90%C3%A1-B%C3%B3ng-%C4%90%C3%A1-i.263496460.16071769873?sp_atk=67b0a2fd-72c9-42af-801b-757aa289fc95&xptdk=67b0a2fd-72c9-42af-801b-757aa289fc95"
-    print(get_ratings(url, dictionary=DICTIONARY))
+    print(check_shopee_id("https://shope.ee/7ezJaRHqka"))
