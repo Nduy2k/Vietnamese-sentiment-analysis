@@ -28,6 +28,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
           rel="stylesheet">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Taviraj:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+          rel="stylesheet">
+
     <link rel="stylesheet" href="../static/style.css" />
   </head>
 
@@ -191,7 +196,8 @@
                       style="border-bottom: 2px solid green;"
                     >
                       <div>
-                        <i class="far fa-hand-point-up me-2" style="color: green;"></i>
+<!--                    <i class="far fa-hand-point-up me-2" style="color: green;"></i>-->
+                        <i class="fa-solid fa-circle-up me-2" style="color: green;"></i>
                       </div>
                       <div style="display: flex;">
                        Đánh giá tốt {{good|length}}/{{total}}
@@ -225,7 +231,7 @@
                       style="border-bottom: 2px solid orange;"
                     >
                       <div>
-                        <i class="far fa-hand-point-right me-2" style="color: orange;"></i>
+                        <i class="fa-solid fa-circle-right me-2" style="color: orange;"></i>
                       </div>
                       <div>
                         Đánh giá trung bình {{medium|length}}/{{total}}
@@ -259,7 +265,9 @@
                       style="border-bottom: 2px solid red;"
                     >
                       <div>
-                        <i class="far fa-hand-point-down me-2" style="color: red;"></i>
+<!--                        <i class="far fa-hand-point-down me-2" style="color: red;"></i>-->
+<!--                        <i class="fa-solid fa-thumbs-down me-2" style="color: red;"></i>-->
+                        <i class="fa-solid fa-circle-down me-2" style="color: red"></i>
                       </div>
                       <div>
                         Đánh giá tệ {{bad|length}}/{{total}}
@@ -293,7 +301,7 @@
                       style="border-bottom: 2px solid black;"
                     >
                       <div>
-                        <i class="fa-regular fa-circle-xmark me-2" style="color: black;"></i>
+                        <i class="fa-solid fa-circle-xmark me-2" style="color: black;"></i>
                       </div>
                       <div>
                         Spam {{spam|length}}/{{total}}
