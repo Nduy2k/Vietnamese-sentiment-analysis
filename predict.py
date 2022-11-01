@@ -78,7 +78,7 @@ def pred_df(filtered_df, model, tokenizer, device=DEVICE):
         # output = F.softmax(output, dim=1)
         _, pred = torch.max(output, dim=1)
 
-        predicted.append(pred.detach().cpu().numpy())
+        predicted.append(int(pred.detach().cpu().numpy()))
 
     filtered_df['predicted'] = predicted
     return filtered_df
