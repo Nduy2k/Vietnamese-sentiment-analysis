@@ -35,17 +35,17 @@ def process():
     print(product_items)
 
     predicted_data = pred_df(filtered_data, model, tokenizer)
-    filtered_data["predicted"] = predicted_data["predicted"]
+    raw_data["predicted"] = predicted_data["predicted"]
 
-    bad_ratings = filtered_data.where(filtered_data["predicted"] == 0).dropna()
-    med_ratings = filtered_data.where(filtered_data["predicted"] == 1).dropna()
-    gud_ratings = filtered_data.where(filtered_data["predicted"] == 2).dropna()
-    spm_ratings = filtered_data.where(filtered_data["predicted"] == 3).dropna()
+    bad_ratings = raw_data.where(raw_data["predicted"] == 0).dropna()
+    med_ratings = raw_data.where(raw_data["predicted"] == 1).dropna()
+    gud_ratings = raw_data.where(raw_data["predicted"] == 2).dropna()
+    spm_ratings = raw_data.where(raw_data["predicted"] == 3).dropna()
 
     product_name = product_items[0]["name"]
     product_image = "https://cf.shopee.vn/file/" + product_items[0]["image"]
 
-    print(product_name, product_image)
+    # print(product_name, product_image)
 
     return render_template("index.html",
                            total=len(filtered_data),
@@ -59,4 +59,3 @@ def process():
 
 
 app.run(port=5000, host='0.0.0.0')
-
