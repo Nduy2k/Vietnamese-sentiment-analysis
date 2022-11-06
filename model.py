@@ -52,3 +52,4 @@ def load_bert(model_name=PRE_TRAINED_MODEL_NAME):
     phobert = AutoModel.from_pretrained(model_name)
     tokenizer = AutoTokenizer.from_pretrained(model_name)
     return tokenizer, phobert
+
