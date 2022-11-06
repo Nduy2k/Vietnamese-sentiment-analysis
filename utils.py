@@ -62,7 +62,7 @@ def get_ratings(product_url, dictionary=None, header=None):
             API_URL.format(shop_id=shop_id, item_id=item_id, offset=offset)
         ).json()
 
-        print(response, end="\n")
+        # print(response, end="\n")
 
         if response["data"]["ratings"] is None:
             break
