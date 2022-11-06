@@ -45,6 +45,12 @@ def process():
     product_name = product_items[0]["name"]
     product_image = "https://cf.shopee.vn/file/" + product_items[0]["image"]
 
+    save_data = filtered_data[filtered_data["predicted"] != 2]
+
+    df = pd.DataFrame(save_data)
+
+    file_path = "../data/data1.csv"
+    df.to_csv(file_path, mode='a', index=False, header=False, encoding="utf-8")
     # print(product_name, product_image)
 
     return render_template("index.html",
@@ -56,5 +62,6 @@ def process():
                            name=product_name,
                            image=product_image
                            )
+
 
 app.run(port=5000, host='0.0.0.0')
