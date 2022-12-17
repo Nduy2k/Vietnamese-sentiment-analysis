@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> {{title}} </title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8"/>
+    <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+            crossorigin="anonymous"
+    />
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+            integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+          rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Taviraj:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="../static/product_detail.css"/>
+</head>
+
+<body>
+<div class="container">
+    <header class="header fixed-top">
+        <nav
+                class="header__navbar navbar navbar-expand-lg navbar-white bg-white"
+        >
+            <div class="header__navbar__container container">
+                <a class="navbar-brand" href="/">
+                    <img class="logo"
+                         src="../static/logo.png"
+                         alt="logo"
+                         id="logo"
+                         style="margin-right: 40px; height: 60px;"
+                    />
+                </a>
+                <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavDropdown"
+                        aria-controls="navbarNavDropdown"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div
+                        class="collapse navbar-collapse justify-content-end"
+                        id="navbarNavDropdown"
+                >
+                    <ul class="navbar-nav">
+                        <li class="nav-item px-3">
+                            <a class="nav-link" href="/product" style="color: rgb(238, 77, 45)">Về sản phẩm</a>
+                        </li>
+                        <!-- https://getbootstrap.com/docs/5.1/components/navbar/ -->
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+</div>
+<section class="section">
+    <p style="text-align: justify">Mua hàng trực tuyến đang là một xu hướng hiện nay do sự tiện lợi, đa dạng các mặt
+        hàng và giá cả mà nó mang lại. Việc đánh giá các sản phẩm trước khi mua sẽ dựa vào các
+        phản hồi đánh giá của những khách hàng đã từng mua hay sử dụng sản phẩm đó. Hiện nay,
+        các trang thương mại điện tử đều có phần đánh giá sản phẩm của khách hàng. Tuy nhiên,
+        các đánh giá này không được sắp xếp hay phân loại, ngoài ra còn chứa một số nội dung rác
+        gây khó khăn cho người mua để có thể tiếp cận những phản hồi này. Mục tiêu của đồ án
+        này là xây dựng một hệ thống có thể phân loại các phản hồi đánh giá sản phẩm thành các
+        loại như sau: đánh giá tệ, đánh giá trung bình, đánh giá tốt và nội dung rác (hay gọi là
+        spam). Với các phương pháp tiếp cận để xây dựng hệ thống là các mô hình mạng nơ ron
+        hồi quy (RNN) và kiến trúc Transformer được áp dụng trong lĩnh vực xử lý ngôn ngữ tự
+        nhiên.</p>
+
+</section>
+
+<footer class="text-center text-white" style="background-color: #f1f1f1;">
+    <!-- Grid container -->
+    <div class="container pt-4">
+        <!-- Section: Social media -->
+        <section class="mb-4">
+            <!-- Facebook -->
+            <a
+                    class="btn btn-link btn-floating btn-lg text-dark m-1"
+                    href="https://www.facebook.com/duynguyenvh/"
+                    role="button"
+                    target="_blank"
+                    data-mdb-ripple-color="dark"
+            ><i class="fab fa-facebook-f"></i
+            ></a>
+
+            <!-- Google -->
+            <a
+                    class="btn btn-link btn-floating btn-lg text-dark m-1"
+                    href="#!"
+                    role="button"
+                    target="_blank"
+                    data-mdb-ripple-color="dark"
+            ><i class="fab fa-google"></i
+            ></a>
+
+            <!-- Github -->
+            <a
+                    class="btn btn-link btn-floating btn-lg text-dark m-1"
+                    href="https://github.com/Nduy2k"
+                    role="button"
+                    target="_blank"
+                    data-mdb-ripple-color="dark"
+            ><i class="fab fa-github"></i
+            ></a>
+        </section>
+        <!-- Section: Social media -->
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        Contact: 035 2939 360
+        <a class="text-dark" href="https://mdbootstrap.com/"></a>
+    </div>
+    <!-- Copyright -->
+</footer>
+
+<script>
+      // scroll id javascript
+      // const element = document.getElementById("data");
+      // element.scrollIntoView();
+
+
+</script>
+
+<!-- Bootstrap JavaScript Libraries -->
+<script
+        src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"
+></script>
+
+<script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+        crossorigin="anonymous"
+></script>
+</body>
+</html>
