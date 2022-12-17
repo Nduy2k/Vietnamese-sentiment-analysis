@@ -1,7 +1,7 @@
 import re
-from typing import Match
 
 from unshortenit import UnshortenIt
+import validators
 import requests
 import pandas as pd
 import pickle
@@ -23,6 +23,9 @@ f.close()
 API_URL = "https://shopee.vn/api/v2/item/get_ratings?filter=0&flag=1&itemid={item_id}&limit=20&offset={offset}&shopid={shop_id}&type=0"
 
 def check_domain_link(link: str) -> bool:
+    if not validators.url(link):
+        return False
+
     unshortener = UnshortenIt()
     link = unshortener.unshorten(link)
     domain = urlparse(link).netloc

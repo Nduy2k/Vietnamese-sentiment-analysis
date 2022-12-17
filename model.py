@@ -1,7 +1,9 @@
 import torch
 from torch import nn
 from torch.nn import Dropout, Linear, ReLU, Softmax, LogSoftmax
-from transformers import AutoModel, AutoTokenizer
+from transformers import AutoModel, AutoTokenizer, logging
+
+logging.set_verbosity_error()
 
 PRE_TRAINED_MODEL_NAME = "vinai/phobert-base"
 NUM_CLASS = 4

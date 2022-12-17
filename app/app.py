@@ -15,6 +15,7 @@ app = Flask(__name__, template_folder="templates")
 # Check device
 device = torch.device("cuda" if torch.cuda.is_available else "cpu")
 
+print("Loading Model...")
 with open("../model/tokenizer.pkl", "rb") as f:
     dictionary = pickle.load(f)
     f.close()
