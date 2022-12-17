@@ -56,7 +56,18 @@ pre {
   justify-content: center;
 }
 
+
+.form-input input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+  transition: background-color 2592000s;
+  }
+
+
+
 .form-analyst .form-input {
+  padding: 0 20px;
   width: 807px;
   height: 80px;
   display: flex;
@@ -68,6 +79,22 @@ pre {
   justify-content: center;
 
   box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+}
+
+.form-input .n_choice {
+    margin-right: 10px;
+    height: 45px;
+    padding: 0 10px;
+    outline: none;
+    border: 1px solid #d9d9d9;
+    color: #737373;
+    border-radius: 6px;
+    background-color: #fff;
+}
+
+.form-input .n_choice {
+  position: relative;
+  display: inline-block;
 }
 
 .form-input .input-url {
@@ -109,6 +136,14 @@ section {
   overflow-x: hidden;
 }
 
+.data-field {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 15px;
+    font-weight: 600;
+}
+
 
 /* Extra Small Devices, Phones */
 /* Mobile */
@@ -142,6 +177,10 @@ section {
   .form-input .btn-submit {
     height: 30px;
     width: 15%;
+  }
+
+  .form-input .n_choice {
+    height: 30px;
   }
 
   .background .text {
@@ -198,4 +237,71 @@ section {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #b30000;
+}
+
+.loading-page {
+}
+
+}
+.loading-page {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: rgb(0, 0, 0, 0.4);
+  display: none;
+}
+
+.loading-page__inner {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.loading-page__content {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.loading-page_dots {
+  width: 15px;
+  color: #ee4d2d;
+  aspect-ratio: 1;
+  position: relative;
+}
+
+.loading-page_dots::before,
+.loading-page_dots::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.loading-page_dots::before {
+  box-shadow: -25px 0;
+  animation: dot-animation-before 0.5s infinite linear;
+}
+
+.loading-page_dots::after {
+  transform: rotate(0deg) translateX(25px);
+  animation: dot-animation-after 0.5s infinite linear;
+}
+
+@keyframes dot-animation-before {
+  100% {
+    transform: translateX(25px)
+  }
+}
+
+@keyframes dot-animation-after {
+  100% {
+    transform: rotate(-180deg) translateX(25px)
+  }
 }

@@ -1,6 +1,4 @@
 import torch
-import requests
-
 
 from tqdm.notebook import tqdm
 tqdm.pandas()
@@ -12,7 +10,7 @@ DEVICE = torch.device("cuda" if torch.cuda.is_available else "cpu")
 print(DEVICE)
 
 
-MAX_LEN = 50
+MAX_LEN = 45
 CLASS_NAMES = ['Bad', 'Medium', 'Good', 'Spam']
 
 
@@ -83,4 +81,7 @@ def pred_df(filtered_df, model, tokenizer, device=DEVICE):
     filtered_df['predicted'] = predicted
     return filtered_df
 
+
+if __name__ == "__main__":
+    model = torch.load("model/model.pt")
 

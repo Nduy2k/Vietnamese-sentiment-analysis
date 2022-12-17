@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>HOME</title>
+<head>
+    <title> {{title}} </title>
     <!-- Required meta tags -->
-    <meta charset="utf-8" />
+    <meta charset="utf-8"/>
     <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
 
     <!-- Bootstrap CSS v5.2.1 -->
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
-      crossorigin="anonymous"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+            crossorigin="anonymous"
     />
     <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+            integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,367 +33,391 @@
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Taviraj:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
           rel="stylesheet">
 
-    <link rel="stylesheet" href="../static/style.css" />
-  </head>
+    <link rel="stylesheet" href="../static/style.css"/>
+</head>
 
-  <body>
-    <div class="container">
-      <header class="header fixed-top">
+<body>
+<div class="container">
+    <header class="header fixed-top">
         <nav
-          class="header__navbar navbar navbar-expand-lg navbar-white bg-white"
+                class="header__navbar navbar navbar-expand-lg navbar-white bg-white"
         >
-          <div class="header__navbar__container container">
-            <a class="navbar-brand" href="#">
-              <img class="logo"
-                src="../static/logo.png"
-                alt="logo"
-                id="logo"
-                style="margin-right: 40px; height: 60px;"
-              />
-            </a>
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarNavDropdown"
-              aria-controls="navbarNavDropdown"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div
-              class="collapse navbar-collapse justify-content-end"
-              id="navbarNavDropdown"
-            >
-              <ul class="navbar-nav">
-                <li class="nav-item px-3">
-                  <a class="nav-link" href="#">EN    |    VI</a>
-                </li>
-                <li class="nav-item px-3">
-                  <a class="nav-link" href="#">Về sản phẩm</a>
-                </li>
-                <!-- https://getbootstrap.com/docs/5.1/components/navbar/ -->
-                <li class="nav-item dropdown px-3" >
-                  <a
-                    class="nav-link dropdown-toggle"
-                    href="#"
-                    id="navbarDropdownMenuLink"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    Hỗ trợ
-                  </a>
-                  <ul
-                    class="dropdown-menu"
-                    aria-labelledby="navbarDropdownMenuLink"
-                  >
-                    <li><a class="dropdown-item" href="#">Updating</a></li>
-                    <li>
-                      <a class="dropdown-item" href="#">Updating</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#">Updating</a>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
+            <div class="header__navbar__container container">
+                <a class="navbar-brand" href="/">
+                    <img class="logo"
+                         src="../static/logo.png"
+                         alt="logo"
+                         id="logo"
+                         style="margin-right: 40px; height: 60px;"
+                    />
+                </a>
+                <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavDropdown"
+                        aria-controls="navbarNavDropdown"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div
+                        class="collapse navbar-collapse justify-content-end"
+                        id="navbarNavDropdown"
+                >
+                    <ul class="navbar-nav">
+                        <li class="nav-item px-3">
+                            <a class="nav-link" href="/product" style="color: black;">Về sản phẩm</a>
+                        </li>
+                        <!-- https://getbootstrap.com/docs/5.1/components/navbar/ -->
+                    </ul>
+                </div>
             </div>
-          </div>
         </nav>
-      </header>
-    </div>
-    <section class="section">
-      <div class="background">
+    </header>
+</div>
+<section class="section">
+    {% if error %}
+    <script>
+            alert('{{error}}')
+
+
+
+    </script>
+    {% endif %}
+    <div class="background">
         <div class="text">
-          <span>Phân tích phản hồi</span>
-          <span>mua hàng trên Shoppe</span>
+            <span>Phân loại phản hồi</span>
+            <span>mua hàng trên Shoppe</span>
         </div>
         <div class="image">
-          <img
-            src="https://deo.shopeemobile.com/shopee/shopee-spx-live-vn/static/media/bg1.eab8552e.png"
-            alt="background"
-            style="width: 100%; margin-bottom: 30px"
-          />
+            <img
+                    src="https://deo.shopeemobile.com/shopee/shopee-spx-live-vn/static/media/bg1.eab8552e.png"
+                    alt="background"
+                    style="width: 100%; margin-bottom: 30px"
+            />
         </div>
         <div class="form-analyst">
-          <form action="/process" method="post" class="form-input">
-            <input
-              class="input-url pe-3"
-              type="url"
-              placeholder="Nhập link sản phẩm tại đây"
-              name="link"
-            />
-            <button class="btn-submit">
-              <i class="fa-solid fa-magnifying-glass-chart"></i>
-              <!-- <div class="spinner-border spinner-border-sm text-light" role="status">
-                <span class="visually-hidden">Loading...</span>
-              </div> -->
-            </button>
-          </form>
+            <form id="form-process" action="/process" method="post" class="form-input">
+                <input
+                        class="input-url pe-3"
+                        type="url"
+                        placeholder="Nhập đường dẫn của sản phẩm tại đây"
+                        name="link"
+                />
+                <select name="max_cmt" class="n_choice">
+                    <option value="100">100</option>
+                    <option value="200" selected>200</option>
+                    <option value="500">500</option>
+                    <option value="All">All</option>
+                </select>
+                <button type="button" class="btn-submit" onclick="submitProcess()">
+                    <i class="fa-solid fa-magnifying-glass-chart"></i>
+                    <!--              <div class="spinner-border spinner-border-sm text-light" role="status">-->
+                    <!--                <span class="visually-hidden">Loading...</span>-->
+                    <!--              </div>-->
+                </button>
+            </form>
+            <script>
+                function submitProcess() {
+                    const elmLoadingPage = document.getElementById('loading-page')
+                    elmLoadingPage.style.display = "block"
+                    elmLoadingPage.style.zIndex = 9999
+                    document.getElementById("form-process").submit();
+                }
+
+            </script>
         </div>
-      </div>
+    </div>
 
-      <div class="data mt-4" id="data">
+    <div class="data mt-4" id="data">
         <div class="container">
-          <div class="row text-center mt-3 mb-4 ">
-            <h1 style="font-weight: bold;">Hỗ trợ mua hàng trực tuyến</h1>
-          </div>
-          <div class="row text-center p-0 m-0">
-            <!-- Show image -->
-            <div class="col-12 col-sm-12 col-md-6 col-lg-6">
-              <img
-                class="img-fluid"
-                src="../static/pic2.png"
-                alt="home_detail"
-                style="max-width: 50%;"
-              />
-              <p class="text-secondary h6 mt-4 fst-italic">
-                Dễ dàng tiếp cận đánh giá mua hàng của các khách hàng khác.
-              </p>
+            <div class="row text-center mt-3 mb-4 ">
+                <h1 style="font-weight: bold;">Hỗ trợ mua hàng trực tuyến</h1>
             </div>
-            <div class="col-12 col-sm-12 col-md-6 col-lg-6">
-              <img
-                class="img-fluid"
-                src="../static/pic3.png"
-                alt="home_detail"
-                style="max-width: 50%;"
+            <div class="row text-center p-0 m-0">
+                <!-- Show image -->
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                    <img
+                            class="img-fluid"
+                            src="../static/pic2.png"
+                            alt="home_detail"
+                            style="max-width: 50%;"
+                    />
+                    <p class="text-secondary h6 mt-4 fst-italic">
+                        Dễ dàng tiếp cận đánh giá mua hàng của các khách hàng khác.
+                    </p>
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                    <img
+                            class="img-fluid"
+                            src="../static/pic3.png"
+                            alt="home_detail"
+                            style="max-width: 50%;"
 
-              />
-              <p class="text-secondary h6 mt-4 fst-italic">
-                Đánh giá sản phẩm trực quan, mua sắm trực tuyến an toàn hơn.
-              </p>
+                    />
+                    <p class="text-secondary h6 mt-4 fst-italic">
+                        Đánh giá sản phẩm trực quan, mua sắm trực tuyến an toàn hơn.
+                    </p>
+                </div>
             </div>
-          </div>
         </div>
         {% if name %}
-          <div class="row p-0 m-0 mt-5">
+        <div id="rating-product" class="row p-0 m-0 mt-5">
             <div class="col-12 col-sm-12 col-md-4 col-lg-4" style="padding-bottom: 20px; text-align: justify;">
-              <h4 class="product-name text-capitalize" style="padding-left: 10px">{{name}}</h4>
+                <h4 class="product-name text-capitalize" style="padding-left: 10px">{{name}}</h4>
             </div>
-          </div>
-          <div class="row text-center p-0 m-0">
+        </div>
+        <div class="row text-center p-0 m-0">
             <!-- Show data -->
             <div class="product-img col-12 col-sm-12 col-md-4 col-lg-4">
-              <img
-                class="img-thumbnail img-fluid"
-                src={{image}}
-                alt="spx_vn_home_detail_summary_5"
-              />
+                <img
+                        class="img-thumbnail img-fluid"
+                        src={{image}}
+                        alt="spx_vn_home_detail_summary_5"
+                />
             </div>
             <div class="col-12 col-sm-12 col-md-8 col-lg-8">
-              <div class="accordion" id="accordionFlushExample">
-                <div class="accordion-item" style="..">
-                  <h2 class="accordion-header d-flex" id="flush-headingOne">
-                    <button
-                      class="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#flush-collapseOne"
-                      aria-expanded="false"
-                      aria-controls="flush-collapseOne"
-                      style="border-bottom: 2px solid green;"
-                    >
-                      <div>
-<!--                    <i class="far fa-hand-point-up me-2" style="color: green;"></i>-->
-                        <i class="fa-solid fa-circle-up me-2" style="color: green;"></i>
-                      </div>
-                      <div style="display: flex;">
-                       Đánh giá tốt {{good|length}}/{{total}}
-                      </div>
-                    </button>
-                  </h2>
-                  <div
-                    id="flush-collapseOne"
-                    class="accordion-collapse collapse"
-                    aria-labelledby="flush-headingOne"
-                    data-bs-parent="#accordionFlushExample"
-                  >
-                    <div class="accordion-body data-ratings-body text-start">
-                      <ol>
-                        {% for d in good %}
-                          <li class="mb-3"><pre>{{d}}</pre></li>
-                        {% endfor %}
-                      </ol>
+                <div class="accordion" id="accordionFlushExample">
+                    <div class="accordion-item" style="..">
+                        <h2 class="accordion-header d-flex" id="flush-headingOne">
+                            <button
+                                    class="accordion-button collapsed"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseOne"
+                                    aria-expanded="false"
+                                    aria-controls="flush-collapseOne"
+                                    style="border-bottom: 2px solid green;"
+                            >
+                                <div>
+                                    <!--                    <i class="far fa-hand-point-up me-2" style="color: green;"></i>-->
+                                    <i class="fa-solid fa-circle-up me-2" style="color: green;"></i>
+                                </div>
+                                <div class="data-field">
+                                    <div>Đánh giá tốt</div>
+                                    <div>{{good|length}}/{{total}}</div>
+                                </div>
+                            </button>
+                        </h2>
+                        <div
+                                id="flush-collapseOne"
+                                class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingOne"
+                                data-bs-parent="#accordionFlushExample"
+                        >
+                            <div class="accordion-body data-ratings-body text-start">
+                                <ol>
+                                    {% for d in good %}
+                                    <li class="mb-3">
+                                        <pre>{{d}}</pre>
+                                    </li>
+                                    {% endfor %}
+                                </ol>
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="flush-headingTwo">
-                    <button
-                      class="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#flush-collapseTwo"
-                      aria-expanded="false"
-                      aria-controls="flush-collapseTwo"
-                      style="border-bottom: 2px solid orange;"
-                    >
-                      <div>
-                        <i class="fa-solid fa-circle-right me-2" style="color: orange;"></i>
-                      </div>
-                      <div>
-                        Đánh giá trung bình {{medium|length}}/{{total}}
-                      </div>
-                    </button>
-                  </h2>
-                  <div
-                    id="flush-collapseTwo"
-                    class="accordion-collapse collapse"
-                    aria-labelledby="flush-headingTwo"
-                    data-bs-parent="#accordionFlushExample"
-                  >
-                    <div class="accordion-body text-start data-ratings-body">
-                      <ol>
-                        {% for d in medium %}
-                          <li class="mb-3"><pre>{{d}}</pre></li>
-                        {% endfor %}
-                      </ol>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingTwo">
+                            <button
+                                    class="accordion-button collapsed"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseTwo"
+                                    aria-expanded="false"
+                                    aria-controls="flush-collapseTwo"
+                                    style="border-bottom: 2px solid orange;"
+                            >
+                                <div>
+                                    <i class="fa-solid fa-circle-right me-2" style="color: orange;"></i>
+                                </div>
+                                <div class="data-field">
+                                    <div>Đánh giá trung bình</div>
+                                    <div>{{medium|length}}/{{total}}</div>
+                                </div>
+                            </button>
+                        </h2>
+                        <div
+                                id="flush-collapseTwo"
+                                class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingTwo"
+                                data-bs-parent="#accordionFlushExample"
+                        >
+                            <div class="accordion-body text-start data-ratings-body">
+                                <ol>
+                                    {% for d in medium %}
+                                    <li class="mb-3">
+                                        <pre>{{d}}</pre>
+                                    </li>
+                                    {% endfor %}
+                                </ol>
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="flush-headingThree">
-                    <button
-                      class="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#flush-collapseThree"
-                      aria-expanded="false"
-                      aria-controls="flush-collapseThree"
-                      style="border-bottom: 2px solid red;"
-                    >
-                      <div>
-<!--                        <i class="far fa-hand-point-down me-2" style="color: red;"></i>-->
-<!--                        <i class="fa-solid fa-thumbs-down me-2" style="color: red;"></i>-->
-                        <i class="fa-solid fa-circle-down me-2" style="color: red"></i>
-                      </div>
-                      <div>
-                        Đánh giá tệ {{bad|length}}/{{total}}
-                      </div>
-                    </button>
-                  </h2>
-                  <div
-                    id="flush-collapseThree"
-                    class="accordion-collapse collapse"
-                    aria-labelledby="flush-headingThree"
-                    data-bs-parent="#accordionFlushExample"
-                  >
-                    <div class="accordion-body text-start data-ratings-body">
-                      <ol>
-                        {% for d in bad %}
-                          <li class="mb-3"><pre>{{d}}</pre></li>
-                        {% endfor %}
-                      </ol>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingThree">
+                            <button
+                                    class="accordion-button collapsed"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseThree"
+                                    aria-expanded="false"
+                                    aria-controls="flush-collapseThree"
+                                    style="border-bottom: 2px solid red;"
+                            >
+                                <div>
+                                    <!--                        <i class="far fa-hand-point-down me-2" style="color: red;"></i>-->
+                                    <!--                        <i class="fa-solid fa-thumbs-down me-2" style="color: red;"></i>-->
+                                    <i class="fa-solid fa-circle-down me-2" style="color: red"></i>
+                                </div>
+                                <div class="data-field">
+                                    <div>Đánh giá tệ</div>
+                                    <div>{{bad|length}}/{{total}}</div>
+                                </div>
+                            </button>
+                        </h2>
+                        <div
+                                id="flush-collapseThree"
+                                class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingThree"
+                                data-bs-parent="#accordionFlushExample"
+                        >
+                            <div class="accordion-body text-start data-ratings-body">
+                                <ol>
+                                    {% for d in bad %}
+                                    <li class="mb-3">
+                                        <pre>{{d}}</pre>
+                                    </li>
+                                    {% endfor %}
+                                </ol>
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="flush-headingFour">
-                    <button
-                      class="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#flush-collapseFour"
-                      aria-expanded="false"
-                      aria-controls="flush-collapseFour"
-                      style="border-bottom: 2px solid black;"
-                    >
-                      <div>
-                        <i class="fa-solid fa-circle-xmark me-2" style="color: black;"></i>
-                      </div>
-                      <div>
-                        Spam {{spam|length}}/{{total}}
-                      </div>
-                    </button>
-                  </h2>
-                  <div
-                    id="flush-collapseFour"
-                    class="accordion-collapse collapse"
-                    aria-labelledby="flush-headingFour"
-                    data-bs-parent="#accordionFlushExample"
-                  >
-                    <div class="accordion-body text-start data-ratings-body">
-                      <ol>
-                        {% for d in spam %}
-                          <li class="mb-3"><pre style="font-family: ">{{d}}</pre></li>
-                        {% endfor %}
-                      </ol>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingFour">
+                            <button
+                                    class="accordion-button collapsed"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseFour"
+                                    aria-expanded="false"
+                                    aria-controls="flush-collapseFour"
+                                    style="border-bottom: 2px solid black;"
+                            >
+                                <div>
+                                    <i class="fa-solid fa-circle-xmark me-2" style="color: black;"></i>
+                                </div>
+                                <div class="data-field">
+                                    <div>Spam</div>
+                                    <div>{{spam|length}}/{{total}}</div>
+                                </div>
+                            </button>
+                        </h2>
+                        <div
+                                id="flush-collapseFour"
+                                class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingFour"
+                                data-bs-parent="#accordionFlushExample"
+                        >
+                            <div class="accordion-body text-start data-ratings-body">
+                                <ol>
+                                    {% for d in spam %}
+                                    <li class="mb-3">
+                                        <pre style="font-family: ">{{d}}</pre>
+                                    </li>
+                                    {% endfor %}
+                                </ol>
+                            </div>
+                        </div>
                     </div>
-                  </div>
                 </div>
-              </div>
             </div>
-          </div>
         </div>
-        {% endif %}
-    </section>
+    </div>
+    <script>
+<!--        document.getElementById('rating-product').scrollIntoView();-->
+        document.location.hash = '#' + 'rating-product'
 
-    <footer class="text-center text-white" style="background-color: #f1f1f1;">
-      <!-- Grid container -->
-      <div class="container pt-4">
+
+
+    </script>
+    {% endif %}
+    <div id="loading-page" class="loading-page">
+        <div class="loading-page__inner">
+            <div class="loading-page__content">
+                <div class="loading-page_dots"></div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<footer class="text-center text-white" style="background-color: #f1f1f1;">
+    <!-- Grid container -->
+    <div class="container pt-4">
         <!-- Section: Social media -->
         <section class="mb-4">
-          <!-- Facebook -->
-          <a
-            class="btn btn-link btn-floating btn-lg text-dark m-1"
-            href="https://www.facebook.com/duynguyenvh/"
-            role="button"
-            target="_blank"
-            data-mdb-ripple-color="dark"
+            <!-- Facebook -->
+            <a
+                    class="btn btn-link btn-floating btn-lg text-dark m-1"
+                    href="https://www.facebook.com/duynguyenvh/"
+                    role="button"
+                    target="_blank"
+                    data-mdb-ripple-color="dark"
             ><i class="fab fa-facebook-f"></i
-          ></a>
+            ></a>
 
-          <!-- Google -->
-          <a
-            class="btn btn-link btn-floating btn-lg text-dark m-1"
-            href="#!"
-            role="button"
-            target="_blank"
-            data-mdb-ripple-color="dark"
+            <!-- Google -->
+            <a
+                    class="btn btn-link btn-floating btn-lg text-dark m-1"
+                    href="#!"
+                    role="button"
+                    target="_blank"
+                    data-mdb-ripple-color="dark"
             ><i class="fab fa-google"></i
-          ></a>
+            ></a>
 
-          <!-- Github -->
-          <a
-            class="btn btn-link btn-floating btn-lg text-dark m-1"
-            href="https://github.com/Nduy2k"
-            role="button"
-            target="_blank"
-            data-mdb-ripple-color="dark"
+            <!-- Github -->
+            <a
+                    class="btn btn-link btn-floating btn-lg text-dark m-1"
+                    href="https://github.com/Nduy2k"
+                    role="button"
+                    target="_blank"
+                    data-mdb-ripple-color="dark"
             ><i class="fab fa-github"></i
-          ></a>
+            ></a>
         </section>
         <!-- Section: Social media -->
-      </div>
-      <!-- Grid container -->
+    </div>
+    <!-- Grid container -->
 
-      <!-- Copyright -->
-      <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    <!-- Copyright -->
+    <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
         Contact: 035 2939 360
         <a class="text-dark" href="https://mdbootstrap.com/"></a>
-      </div>
-      <!-- Copyright -->
-    </footer>
+    </div>
+    <!-- Copyright -->
+</footer>
 
-    <script>
+<script>
       // scroll id javascript
       // const element = document.getElementById("data");
       // element.scrollIntoView();
-    </script>
 
-    <!-- Bootstrap JavaScript Libraries -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-      crossorigin="anonymous"
-    ></script>
+</script>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
-      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+<!-- Bootstrap JavaScript Libraries -->
+<script
+        src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"
+></script>
+
+<script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+        crossorigin="anonymous"
+></script>
+</body>
 </html>

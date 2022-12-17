@@ -1,9 +1,12 @@
 import re
+from typing import Match
+
 from unshortenit import UnshortenIt
 import requests
 import pandas as pd
 import pickle
 from preprocessing import standardize_data, rm_header
+from urllib.parse import urlparse
 
 HEADER = {
     "color": "màu sắc",
@@ -19,8 +22,18 @@ f.close()
 
 API_URL = "https://shopee.vn/api/v2/item/get_ratings?filter=0&flag=1&itemid={item_id}&limit=20&offset={offset}&shopid={shop_id}&type=0"
 
+def check_domain_link(link: str) -> bool:
+    unshortener = UnshortenIt()
+    link = unshortener.unshorten(link)
+    domain = urlparse(link).netloc
 
-def check_shopee_id(link):
+    if "shopee" in domain.split("."):
+        return True
+    else:
+        return False
+
+
+def check_shopee_id(link: str):
     unshortener = UnshortenIt()
     link = unshortener.unshorten(link)
 
@@ -31,8 +44,9 @@ def check_shopee_id(link):
         return re.search(r"product/(\d+)/(\d+)", link)
 
 
-def get_ratings(product_url, dictionary=None, header=None):
+def get_ratings(product_url: str, max_cmt: str, dictionary=None, header=None):
     """
+    :param max_cmt: number of max comment
     :param product_url: link of shopee product
     :param header: header will be removed
     :param dictionary: dictionary
@@ -62,8 +76,6 @@ def get_ratings(product_url, dictionary=None, header=None):
             API_URL.format(shop_id=shop_id, item_id=item_id, offset=offset)
         ).json()
 
-        # print(response, end="\n")
-
         if response["data"]["ratings"] is None:
             break
 
@@ -72,9 +84,6 @@ def get_ratings(product_url, dictionary=None, header=None):
         for i, rating in enumerate(response["data"]["ratings"], 1):
             if rating["comment"]:
                 count += 1
-
-            # print(count)
-            # print(rating["comment"])
 
             comments = standardize_data(rating['comment'])
             if comments:
@@ -89,6 +98,10 @@ def get_ratings(product_url, dictionary=None, header=None):
         if i % 20:
             break
         offset += 20
+
+        if max_cmt != "All":
+            if len(filtered_ratings) > int(max_cmt):
+                break
 
         ratings_data = response["data"]["ratings"]
         product_data = ratings_data[0]
