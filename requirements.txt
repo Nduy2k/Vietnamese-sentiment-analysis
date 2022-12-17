@@ -1,0 +1,8 @@
+transformers~=4.23.1
+pandas~=1.5.2
+torch~=1.11.0
+tqdm~=4.64.0
+Flask~=2.2.2
+requests~=2.28.1
+unshortenit~=0.4.0
+vncorenlp~=1.0.3
